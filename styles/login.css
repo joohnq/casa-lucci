@@ -1,0 +1,59 @@
+main {
+  background: linear-gradient(
+      0deg,
+      rgba(61, 19, 47, 0.85),
+      rgba(61, 19, 47, 0.85)
+    ),
+    url("../assets/casa-lucci-bg-home-2.jpg") no-repeat;
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#Login {
+  background-color: #fff;
+  width: 700px;
+  padding: 70px;
+  border-radius: 30px;
+}
+
+.LoginLogo {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.LoginLogo img {
+  width: 300px;
+}
+
+.LoginForm div {
+  margin-top: 20px;
+}
+
+.LoginForm_Label {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.LoginForm_Input {
+  background-color: #d9d9d9;
+  height: 50px;
+  width: 100%;
+  border: 0;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+.LoginForm_Button {
+  background-color: #3d132f;
+  width: 100%;
+  padding: 20px 0;
+  color: #fff;
+  margin-top: 40px;
+  border: 0;
+  border-radius:5px;
+  font-weight: bold;
+  font-size: 20px;
+}
