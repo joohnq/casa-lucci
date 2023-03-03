@@ -15,6 +15,51 @@
   height: 80px;
 }
 
+#Aside ul {
+  list-style: none;
+}
+
+#Aside .AsideNav {
+  padding: 0 !important;
+  margin: 10px 20px;
+}
+
+#Aside .AsideNav_item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+#Aside .AsideNav_item:hover > .AsideNav_item-text {
+  display: block;
+}
+
+#Aside .AsideNav_item:hover {
+  background-color: #8d4886;
+  width:300px;
+  position: relative;
+  z-index: 100000;
+  transition: 0.1s ease-in-out;
+}
+
+#Aside .AsideNav_item-icon {
+  width: 30px;
+  height: 30px;
+}
+
+#Aside .AsideNav_item-text {
+  text-decoration: none;
+  width: 300px;
+  display: none;
+  color: #fff;
+  font-weight: bold;
+  vertical-align: middle;
+  margin-bottom: 0 !important;
+}
+
 .ContentMain {
   width: 100%;
 }
@@ -51,7 +96,7 @@
   margin-top: -5px;
   margin-left: -5px;
   content: "";
-  background: url('../assets/arow-down.png');
+  background: url("../assets/arow-down.png");
   width: 20px;
   height: 20px;
   vertical-align: middle;
