@@ -136,7 +136,8 @@
   background: url("../assets/casa-lucci-bg-home-2.jpg") center center no-repeat;
   background-size: cover;
 }
-.carousel-control-next, .carousel-control-prev{
+.carousel-control-next,
+.carousel-control-prev {
   z-index: 1 !important;
 }
 
@@ -164,14 +165,14 @@
 .accordion-body {
   position: absolute;
   z-index: 10;
+  width: 100%;
 }
 
 .collapsing {
   transition: none !important;
 }
 
-.collapse,
-.card {
+.collapse {
   width: 100%;
   height: 100%;
 }
@@ -181,10 +182,75 @@
   margin-bottom: 20px;
 }
 
+.CadastroDeClientesFormRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+  margin: 20px 100px;
+}
+
+.CadastroDeClientesFormField {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.nomeCompleto,
+.tipoDoEvento {
+  width: 70%;
+}
+
+.dataNascimento,
+.cpf,
+.rg,
+.tel {
+  width: 30%;
+}
+
+.enderecoCompleto {
+  width: 80%;
+}
+
+.number {
+  width: 20%;
+}
+
+.cidade {
+  width: 40%;
+}
+.uf {
+  width: 30%;
+}
+.cep {
+  width: 30%;
+}
+
+.CadastroDeClientesFormLabel {
+  font-size: 24px;
+}
+
+.CadastroDeClientesFormInput[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+.CadastroDeClientesFormInput[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
 .CadastroDeClientesFormInput,
 .CadastroDeClientesFormSelect {
   border: 0;
   border-bottom: 2px solid #000;
+  width: 100%;
+  height: 50px;
+  font-size: 20px;
+}
+
+.CadastroDeClientesFormInput:focus,
+.CadastroDeClientesFormSelect:focus {
+  outline: 0;
 }
 
 @media screen and (min-width: 768px) {

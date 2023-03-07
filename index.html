@@ -41,7 +41,7 @@
               alt=""
               class="AsideNav_item-icon"
             />
-            <p class="AsideNav_item-text">Cadastro de clientes</p>
+            <p class="AsideNav_item-text">Cadastro de Clientes</p>
           </li>
           <li
             class="AsideNav_item accordion-header collapsed"
@@ -320,46 +320,197 @@
               data-bs-parent="#accordionFlushExample"
             >
               <div class="accordion-body">
-                <form class="cadastroDeClienteForm">
-                  <div class="cadastroDeClienteFormRow">
-                    <div class="cadastroDeClienteFormField">
+                <form class="CadastroDeClientesForm container">
+                  <h2 class="CadastroDeClientesFormTitle">Ficha de Cadastro</h2>
+                  <div class="CadastroDeClientesFormRow">
+                    <div class="CadastroDeClientesFormField tipoDoEvento">
                       <label
-                        class="cadastroDeClienteFormLabel"
+                        class="CadastroDeClientesFormLabel"
                         for="tipoDoEvento"
                         >Tipo do evento</label
                       >
                       <select
-                        class="cadastroDeClienteFormInput"
+                        class="CadastroDeClientesFormInput"
                         name="tipoDoEvento"
                         id="tipoDoEvento"
                       ></select>
                     </div>
                   </div>
-                  <div class="cadastroDeClienteFormRow">
-                    <div class="cadastroDeClienteFormField">
+                  <div class="CadastroDeClientesFormRow">
+                    <div class="CadastroDeClientesFormField nomeCompleto">
                       <label
-                        class="cadastroDeClienteFormLabel"
+                        class="CadastroDeClientesFormLabel"
                         for="nomeCompleto"
                         >Nome completo:</label
                       >
                       <input
                         type="text"
-                        class="cadastroDeClienteFormInput"
+                        class="CadastroDeClientesFormInput"
                         name="nomeCompleto"
                         id="nomeCompleto"
                       />
                     </div>
-                    <div class="cadastroDeClienteFormField">
+                    <div class="CadastroDeClientesFormField dataNascimento">
                       <label
-                        class="cadastroDeClienteFormLabel"
+                        class="CadastroDeClientesFormLabel"
                         for="dataNascimento"
                         >Data de nascimento:</label
                       >
                       <input
                         type="date"
-                        class="cadastroDeClienteFormInput"
+                        class="CadastroDeClientesFormInput"
                         name="dataNascimento"
                         id="dataNascimento"
+                      />
+                    </div>
+                  </div>
+                  <div class="CadastroDeClientesFormRow">
+                    <div class="CadastroDeClientesFormField rg">
+                      <label class="CadastroDeClientesFormLabel" for="rg"
+                        >RG:</label
+                      >
+                      <input
+                        type="number"
+                        class="CadastroDeClientesFormInput"
+                        name="rg"
+                        id="rg"
+                      />
+                    </div>
+                    <div class="CadastroDeClientesFormField cpf">
+                      <label class="CadastroDeClientesFormLabel" for="cpf"
+                        >CPF:</label
+                      >
+                      <input
+                        type="number"
+                        class="CadastroDeClientesFormInput"
+                        name="cpf"
+                        id="cpf"
+                      />
+                    </div>
+                    <div class="CadastroDeClientesFormField tel">
+                      <label class="CadastroDeClientesFormLabel" for="tel"
+                        >Tel:</label
+                      >
+                      <input
+                        type="tel"
+                        class="CadastroDeClientesFormInput"
+                        name="tel"
+                        id="tel"
+                      />
+                    </div>
+                  </div>
+                  <div class="CadastroDeClientesFormRow">
+                    <div class="CadastroDeClientesFormField enderecoCompleto">
+                      <label
+                        class="CadastroDeClientesFormLabel"
+                        for="enderecoCompleto"
+                        >Endereço Completo:</label
+                      >
+                      <input
+                        type="text"
+                        class="CadastroDeClientesFormInput"
+                        name="enderecoCompleto"
+                        id="enderecoCompleto"
+                      />
+                    </div>
+                    <div class="CadastroDeClientesFormField number">
+                      <label class="CadastroDeClientesFormLabel" for="number"
+                        >Número°:</label
+                      >
+                      <input
+                        type="number"
+                        class="CadastroDeClientesFormInput"
+                        name="number"
+                        id="number"
+                      />
+                    </div>
+                  </div>
+                  <div class="CadastroDeClientesFormRow">
+                    <div class="CadastroDeClientesFormField cidade">
+                      <label class="CadastroDeClientesFormLabel" for="cidade"
+                        >Cidade:</label
+                      >
+                      <input
+                        type="text"
+                        class="CadastroDeClientesFormInput"
+                        name="cidade"
+                        id="cidade"
+                      />
+                    </div>
+                    <div class="CadastroDeClientesFormField uf">
+                      <label class="CadastroDeClientesFormLabel" for="uf"
+                        >UF:</label
+                      >
+                      <select
+                        type="number"
+                        class="CadastroDeClientesFormSelect"
+                        name="uf"
+                        id="uf"
+                      >
+                        <option value="">Selecione...</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                        <option value="EX">Estrangeiro</option>
+                      </select>
+                    </div>
+                    <div class="CadastroDeClientesFormField cep">
+                      <label class="CadastroDeClientesFormLabel" for="cep"
+                        >CEP:</label
+                      >
+                      <input
+                        type="number"
+                        class="CadastroDeClientesFormInput"
+                        name="cep"
+                        id="cep"
+                      />
+                    </div>
+                  </div>
+                  <div class="CadastroDeClientesFormRow">
+                    <div class="CadastroDeClientesFormField bairro">
+                      <label class="CadastroDeClientesFormLabel" for="bairro"
+                        >Bairro:</label
+                      >
+                      <input
+                        type="text"
+                        class="CadastroDeClientesFormInput"
+                        name="bairro"
+                        id="bairro"
+                      />
+                    </div>
+                    <div class="CadastroDeClientesFormField cep">
+                      <label class="CadastroDeClientesFormLabel" for="email"
+                        >Email:</label
+                      >
+                      <input
+                        type="email"
+                        class="CadastroDeClientesFormInput"
+                        name="email"
+                        id="email"
                       />
                     </div>
                   </div>
