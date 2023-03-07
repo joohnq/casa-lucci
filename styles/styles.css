@@ -1,3 +1,8 @@
+@font-face {
+  font-family: "Antapani";
+  src: url("Antapani-ExtraLight.ttf") format("truetype");
+}
+
 #Home {
   display: flex;
   flex-direction: row;
@@ -10,7 +15,7 @@
   text-align: center;
 }
 
-#Aside img {
+#Aside > img {
   width: 80px;
   height: 80px;
 }
@@ -58,6 +63,7 @@
   font-weight: bold;
   vertical-align: middle;
   margin-bottom: 0 !important;
+  font-family: "Antapani" sans-serif;
 }
 
 .ContentMain {
@@ -94,6 +100,7 @@
   border: 0 !important;
   color: #000 !important;
   font-weight: bold;
+  font-family: "Antapani" sans-serif;
 }
 
 #Header .dropdown-toggle::after {
@@ -129,20 +136,34 @@
   background: url("../assets/casa-lucci-bg-home-2.jpg") center center no-repeat;
   background-size: cover;
 }
+.carousel-control-next, .carousel-control-prev{
+  z-index: 1 !important;
+}
 
-.accordion-item {
+.accordion {
   position: absolute;
   top: 10vh;
-  bottom: 0;
-  right: 0;
-  left: 0;
+  width: 100%;
   height: 90vh;
+  z-index: 2;
   background-color: transparent;
   border: 0 !important;
 }
+.accordion-item {
+  border: 0 !important;
+  background: transparent;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
 
 .accordion-collapse {
-  background-color: #fff;
+  background: #fff;
+}
+
+.accordion-body {
+  position: absolute;
+  z-index: 10;
 }
 
 .collapsing {
