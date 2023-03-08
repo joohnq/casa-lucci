@@ -1,6 +1,10 @@
 @font-face {
   font-family: "Antapani";
-  src: url("Antapani-ExtraLight.ttf") format("truetype");
+  src: url("/Antapani-ExtraLight.ttf") format("truetype");
+}
+
+body {
+  font-family: "Antapani";
 }
 
 #Home {
@@ -127,15 +131,40 @@
 }
 
 #Carousel .carousel-item:nth-child(1) {
-  background: url("../assets/casa-lucci-bg-home-slider-1.png") center center
-    no-repeat;
+  background: url("../assets/carousel1.jpg") center center no-repeat;
   background-size: cover;
 }
 
 #Carousel .carousel-item:nth-child(2) {
-  background: url("../assets/casa-lucci-bg-home-2.jpg") center center no-repeat;
+  background: url("../assets/carousel2.jpg") center center no-repeat;
   background-size: cover;
 }
+#Carousel .carousel-item:nth-child(3) {
+  background: url("../assets/carousel3.jpg") center center no-repeat;
+  background-size: cover;
+}
+#Carousel .carousel-caption {
+  position: absolute;
+  right: 10%;
+  bottom: 0;
+  left: 10%;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  color: #fff;
+  text-align: start;
+  height: 100%;
+}
+
+#Carousel .carousel-caption h5 {
+  text-transform: uppercase;
+  font-size: 100px;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .carousel-control-next,
 .carousel-control-prev {
   z-index: 1 !important;
@@ -146,7 +175,6 @@
   top: 10vh;
   width: 100%;
   height: 90vh;
-  z-index: 2;
   background-color: transparent;
   border: 0 !important;
 }
@@ -160,6 +188,8 @@
 
 .accordion-collapse {
   background: #fff;
+  position: absolute;
+  z-index: 10;
 }
 
 .accordion-body {
