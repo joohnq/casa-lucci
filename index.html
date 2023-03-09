@@ -65,7 +65,7 @@
             aria-controls="flush-collapseThree"
           >
             <img
-              src="./assets/casasLocacao.png"
+              src="./assets/CasasLocacao.png"
               alt=""
               class="AsideNav_item-icon"
             />
@@ -342,7 +342,10 @@
               data-bs-parent="#accordionFlushExample"
             >
               <div class="accordion-body">
-                <form class="CadastroDeClientesForm container">
+                <form
+                  class="CadastroDeClientesForm container"
+                  id="CadastroDeClientesForm"
+                >
                   <h2 class="CadastroDeClientesFormTitle">Ficha de Cadastro</h2>
                   <div class="CadastroDeClientesFormRow">
                     <div class="CadastroDeClientesFormField tipoDoEvento">
@@ -559,12 +562,35 @@
               data-bs-parent="#accordionFlushExample"
             >
               <div class="accordion-body">
-                Placeholder content for this accordion, which is intended to
-                demonstrate the <code>.accordion-flush</code> class. This is the
-                third item's accordion body. Nothing more exciting happening
-                here in terms of content, but just filling up the space to make
-                it look, at least at first glance, a bit more representative of
-                how this would look in a real-world application.
+                <div class="CasasLocacao container" id="CasasLocacao">
+                  <h2 class="CasasLocacaoTitle">NOSSO ESPAÇOS</h2>
+                  <h3 class="CasasLocacaoSubtitle">
+                    Espaços de eventos versáteis, localizados em bairros nobres
+                    de São Paulo
+                  </h3>
+                  <div class="CasasLocacaoImages">
+                    <div class="CasasLocacaoImagesRow">
+                      <div class="CasasLocacaoImagesBox">
+                        <img src="assets/carousel1.jpg" alt="" />
+                        <p class="CasasLocacaoImagesBox_desc">LUCCI GARDENS</p>
+                      </div>
+                      <div class="CasasLocacaoImagesBox">
+                        <img src="assets/carousel2.jpg" alt="" />
+                        <p class="CasasLocacaoImagesBox_desc">CASA MOBUMBI</p>
+                      </div>
+                    </div>
+                    <div class="CasasLocacaoImagesRow">
+                      <div class="CasasLocacaoImagesBox">
+                        <img src="assets/carousel3.jpg" alt="" />
+                        <p class="CasasLocacaoImagesBox_desc">CASA JARDINS</p>
+                      </div>
+                      <div class="CasasLocacaoImagesBox">
+                        <img src="assets/carousel3.jpg" alt="" />
+                        <p class="CasasLocacaoImagesBox_desc">PÁTIO BENITTO</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div
@@ -645,7 +671,183 @@
               aria-labelledby="flush-headingThirteen"
               data-bs-parent="#accordionFlushExample"
             >
-              <div class="accordion-body">Thirteen</div>
+              <div class="accordion-body">
+                <section class="Investimentos" id="Investimentos">
+                  <h2 class="InvestimentosTitle">APRESENTAÇÃO DE VALORES</h2>
+                  <div class="InvestimentosGeneralInfos">
+                    <img
+                      class="InvestimentosGeneralInfoLogo"
+                      src="./assets/logo.png"
+                      alt="LOGO WELUCCI"
+                    />
+                    <div class="GeneralInfos_items">
+                      <div class="GeneralInfos_item">
+                        <p class="GeneralInfos_items-title">Contrato</p>
+                        <p class="GeneralInfos_items-value">CL-68722</p>
+                      </div>
+                      <div class="GeneralInfos_item">
+                        <p class="GeneralInfos_items-title">DATA PROPOSTA</p>
+                        <p class="GeneralInfos_items-value">CL-68722</p>
+                      </div>
+                      <div class="GeneralInfos_item">
+                        <p class="GeneralInfos_items-title">DATA EVENTO</p>
+                        <p class="GeneralInfos_items-value">CL-68722</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="DadosClienteEvento">
+                    <h3 class="DadosClienteEventoTitle">
+                      DADOS DO CLIENTE E DO EVENTO
+                    </h3>
+                    <div class="DadosClienteEventoInfos">
+                      <div class="DadosClienteEventoInfosRow">
+                        <div class="DadosClienteEventoInfosField anfitrioes">
+                          <label
+                            class="DadosClienteEventoInfos_label"
+                            for="anfitrioes"
+                            >Anfitriões</label
+                          >
+                          <div class="DadosClienteEventoInfos_falseInput">
+                            <p></p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="DadosClienteEventoInfosRow">
+                        <div class="DadosClienteEventoInfosField dataEvento">
+                          <label
+                            class="DadosClienteEventoInfos_label"
+                            for="dataEvento"
+                            >Data do Evento:</label
+                          >
+                          <div class="DadosClienteEventoInfos_falseInput">
+                            <p>12/12/2023</p>
+                          </div>
+                        </div>
+                        <div class="DadosClienteEventoInfosField numConvidados">
+                          <label
+                            class="DadosClienteEventoInfos_label"
+                            for="numConvidados"
+                            >N° de Convidados:</label
+                          >
+                          <div class="DadosClienteEventoInfos_falseInput">
+                            <p>1000</p>
+                          </div>
+                        </div>
+                        <div class="DadosClienteEventoInfosField codProposta">
+                          <label
+                            class="DadosClienteEventoInfos_label"
+                            for="codProposta"
+                            >Cód. da Proposta:</label
+                          >
+                          <div class="DadosClienteEventoInfos_falseInput">
+                            <p>CL-72345</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="DadosClienteEventoInfosRow">
+                        <div class="DadosClienteEventoInfosField horaEvento">
+                          <label
+                            class="DadosClienteEventoInfos_label"
+                            for="horaEvento"
+                            >Hora do Evento:</label
+                          >
+                          <div class="DadosClienteEventoInfos_falseInput">
+                            <p>24h00m</p>
+                          </div>
+                        </div>
+                        <div
+                          class="DadosClienteEventoInfosField espacoEscolhido"
+                        >
+                          <label
+                            class="DadosClienteEventoInfos_label"
+                            for="espacoEscolhido"
+                            >Espaço Escolhido:</label
+                          >
+                          <div class="DadosClienteEventoInfos_falseInput">
+                            <p>Casa Jardins</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="TablePrices">
+                    <table>
+                      <thead class="TablePricesTitles">
+                        <tr>
+                          <td class="column-1">Tabela de Preço por Produto</td>
+                          <td class="column-2">Valor da Venda</td>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td class="TablePricesBlack">Locação do Espaço:</td>
+                          <td>R$300.000,00</td>
+                        </tr>
+                        <tr>
+                          <td class="TablePricesPurple">Adicional Locação:</td>
+                          <td>R$300.000,00</td>
+                        </tr>
+                        <tr>
+                          <td class="TablePricesBlack">Staff:</td>
+                          <td>R$300.000,00</td>
+                        </tr>
+                        <tr>
+                          <td class="TablePricesPurple">Adicional Staff:</td>
+                          <td>R$300.000,00</td>
+                        </tr>
+                        <tr>
+                          <td class="TablePricesBlack">Som/Iluminação:</td>
+                          <td>R$300.000,00</td>
+                        </tr>
+                        <tr>
+                          <td class="TablePricesPurple">Projeção mapeada:</td>
+                          <td>R$300.000,00</td>
+                        </tr>
+                        <tr>
+                          <td class="TablePricesPurple">Adicional Som/Luz:</td>
+                          <td>R$300.000,00</td>
+                        </tr>
+                        <tr>
+                          <td class="TablePricesBlack">Decoração:</td>
+                          <td>R$300.000,00</td>
+                        </tr>
+                        <tr>
+                          <td class="TablePricesPurple">Adicional Decoração:</td>
+                          <td>R$300.000,00</td>
+                        </tr>
+                        <tr>
+                          <td class="TablePricesBlack">Alta Gastronomia:</td>
+                          <td>R$300.000,00</td>
+                        </tr>
+                        <tr>
+                          <td class="TablePricesPurple">Adicional Gastronomia:</td>
+                          <td>R$300.000,00</td>
+                        </tr>
+                        <tr>
+                          <td class="TablePricesBlack">OpenBar:</td>
+                          <td>R$300.000,00</td>
+                        </tr>
+                        <tr>
+                          <td class="TablePricesPurple">Adicional Bebidas:</td>
+                          <td>R$300.000,00</td>
+                        </tr>
+                        <tr>
+                          <td class="TablePricesBlack">Alta Confeitaria:</td>
+                          <td>R$300.000,00</td>
+                        </tr>
+                        <tr>
+                          <td class="TablePricesPurple">Adicional Confeitaria:</td>
+                          <td>R$300.000,00</td>
+                        </tr>
+                        <tr>
+                          <td class="TablePricesBlack">Outros Adicionais:</td>
+                          <td>R$300.000,00</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </section>
+              </div>
             </div>
             <div
               id="flush-collapseFourteen"

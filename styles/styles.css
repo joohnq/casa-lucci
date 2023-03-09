@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap");
+
 @font-face {
   font-family: "Antapani";
   src: url("/Antapani-ExtraLight.ttf") format("truetype");
@@ -190,6 +192,7 @@ body {
   background: #fff;
   position: absolute;
   z-index: 10;
+  overflow-y: auto;
 }
 
 .accordion-body {
@@ -207,12 +210,12 @@ body {
   height: 100%;
 }
 
-.CadastroDeClientesFormTitle {
+#CadastroDeClientesForm .CadastroDeClientesFormTitle {
   text-align: center;
   margin-bottom: 20px;
 }
 
-.CadastroDeClientesFormRow {
+#CadastroDeClientesForm .CadastroDeClientesFormRow {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -220,57 +223,58 @@ body {
   margin: 20px 100px;
 }
 
-.CadastroDeClientesFormField {
+#CadastroDeClientesForm .CadastroDeClientesFormField {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: column;
 }
 
-.nomeCompleto,
-.tipoDoEvento {
+#CadastroDeClientesForm .nomeCompleto,
+#CadastroDeClientesForm .tipoDoEvento {
   width: 70%;
 }
 
-.dataNascimento,
-.cpf,
-.rg,
-.tel {
+#CadastroDeClientesForm .dataNascimento,
+#CadastroDeClientesForm .cpf,
+#CadastroDeClientesForm .rg,
+#CadastroDeClientesForm .tel {
   width: 30%;
 }
 
-.enderecoCompleto {
+#CadastroDeClientesForm .enderecoCompleto {
   width: 80%;
 }
 
-.number {
+#CadastroDeClientesForm .number {
   width: 20%;
 }
 
-.cidade {
+#CadastroDeClientesForm .cidade {
   width: 40%;
 }
-.uf {
+#CadastroDeClientesForm .uf {
   width: 30%;
 }
-.cep {
+#CadastroDeClientesForm .cep {
   width: 30%;
 }
 
-.CadastroDeClientesFormLabel {
+#CadastroDeClientesForm .CadastroDeClientesFormLabel {
   font-size: 24px;
 }
 
-.CadastroDeClientesFormInput[type="number"] {
+#CadastroDeClientesForm .CadastroDeClientesFormInput[type="number"] {
   -moz-appearance: textfield;
   appearance: textfield;
 }
-.CadastroDeClientesFormInput[type="number"]::-webkit-inner-spin-button {
+#CadastroDeClientesForm
+  .CadastroDeClientesFormInput[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 
-.CadastroDeClientesFormInput,
-.CadastroDeClientesFormSelect {
+#CadastroDeClientesForm .CadastroDeClientesFormInput,
+#CadastroDeClientesForm .CadastroDeClientesFormSelect {
   border: 0;
   border-bottom: 2px solid #000;
   width: 100%;
@@ -278,9 +282,249 @@ body {
   font-size: 20px;
 }
 
-.CadastroDeClientesFormInput:focus,
-.CadastroDeClientesFormSelect:focus {
+#CadastroDeClientesForm .CadastroDeClientesFormInput:focus,
+#CadastroDeClientesForm .CadastroDeClientesFormSelect:focus {
   outline: 0;
+}
+
+#CasasLocacao {
+  text-align: center;
+}
+
+#CasasLocacao .CasasLocacaoSubtitle {
+  font-family: "Dancing Script", cursive;
+}
+
+#CasasLocacao .CasasLocacaoImages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+#CasasLocacao .CasasLocacaoImagesBox {
+  position: relative;
+  margin-bottom: 15px;
+  max-width: 500px;
+  height: 333.13px;
+}
+
+#CasasLocacao .CasasLocacaoImagesBox img {
+  width: 100%;
+  object-fit: cover;
+}
+#CasasLocacao .CasasLocacaoImagesBox:hover > img {
+  position: relative;
+  z-index: 100;
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  transition: all 0.2s ease-in-out;
+}
+
+#CasasLocacao .CasasLocacaoImagesBox_desc {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 10px 0;
+  margin-bottom: 0 !important;
+}
+
+.InvestimentosTitle {
+  text-align: center;
+  font-weight: bold;
+  font-size: 40px;
+  margin-bottom: 50px;
+}
+
+.InvestimentosGeneralInfos {
+  background-color: #f7f7f7;
+  padding: 30px;
+
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.InvestimentosGeneralInfoLogo {
+  width: 300px;
+}
+
+.GeneralInfos_items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.GeneralInfos_item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.GeneralInfos_items-title {
+  font-weight: bold;
+  margin-bottom: 0 !important;
+}
+
+.GeneralInfos_items-value {
+  background-color: #fff;
+  border: 1px solid #8c4887;
+  vertical-align: middle;
+  border-radius: 10px;
+  margin-bottom: 0 !important;
+  padding: 5px 10px;
+  font-weight: bold;
+  color: #999999;
+}
+
+.DadosClienteEventoTitle {
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #8c4887;
+  color: #8c4887;
+  font-weight: bold;
+  padding-bottom: 40px;
+  margin-top: 80px;
+}
+
+.DadosClienteEventoInfosRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 30px;
+  margin-bottom: 20px;
+}
+
+.DadosClienteEventoInfos_label {
+  font-weight: bold;
+  color: #000;
+  width: 50%;
+  text-align: end;
+}
+
+.DadosClienteEventoInfosField {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.DadosClienteEventoInfos_falseInput {
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+
+  position: relative;
+}
+.DadosClienteEventoInfos_falseInput p {
+  margin-bottom: 0 !important;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+}
+
+.anfitrioes {
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+}
+.anfitrioes .DadosClienteEventoInfos_label {
+  width: 10%;
+}
+
+.dataEvento,
+.numConvidados,
+.codProposta {
+  width: 30%;
+}
+
+.horaEvento {
+  width: 40%;
+}
+
+.espacoEscolhido {
+  width: 60%;
+}
+
+.TablePrices table {
+  width: 100%;
+}
+
+.TablePricesTitles {
+  background-color: #3d132f;
+  color: #fff;
+  font-weight: bold;
+}
+
+.TablePricesTitles tr td {
+  padding: 10px 50px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.TablePrices tbody tr {
+  font-size: 30px;
+}
+
+.TablePrices tbody tr {
+  font-size: 30px;
+}
+.TablePrices tbody tr td:nth-child(2) {
+  text-align: center;
+  font-weight: bold;
+}
+
+.column-1 {
+  width: 70%;
+}
+
+.column-2 {
+  width: 30%;
+}
+
+.TablePricesBlack {
+  color: #000;
+  font-weight: bold;
+  padding-left: 40px;
+  font-size: 30px;
+}
+
+.TablePricesPurple {
+  color: #8c4887;
+  font-weight: bold;
+  font-size: 30px;
+  padding-left: 40px;
+}
+.TablePricesPurple ~ td {
+  color: gray;
+}
+
+.TablePricesFooter{
+  width: 100%;
+}
+
+.TablePricesFooter .row-1 {
+  background-color: #3d132f;
+  color: #fff;
+  padding: 10px 50px;
+
+}
+.TablePricesFootert .row-2 {
+  background-color: #8c4887;
+  color: #fff;
+  padding: 10px 50px;
+
+
 }
 
 @media screen and (min-width: 768px) {
