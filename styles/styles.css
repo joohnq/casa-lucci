@@ -2,11 +2,12 @@
 
 @font-face {
   font-family: "Antapani";
-  src: url("/Antapani-ExtraLight.ttf") format("truetype");
+  src: url("http://projetos.tgamkt.com/casalucci/Antapani.ttf")
+    format("truetype");
 }
 
 body {
-  font-family: "Antapani" sans-serif;
+  font-family: "Antapani", sans-serif;
 }
 
 #Home {
@@ -167,8 +168,8 @@ body {
   flex-direction: column;
 }
 
-.carousel-control-next,
-.carousel-control-prev {
+#Carousel.carousel-control-next,
+#Carousel.carousel-control-prev {
   z-index: 1 !important;
 }
 
@@ -307,6 +308,9 @@ body {
   margin-bottom: 15px;
   max-width: 500px;
   height: 333.13px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #CasasLocacao .CasasLocacaoImagesBox img {
@@ -315,7 +319,7 @@ body {
 }
 #CasasLocacao .CasasLocacaoImagesBox:hover > img {
   position: relative;
-  z-index: 100;
+  z-index: 10;
   -webkit-transform: scale(1.2);
   transform: scale(1.2);
   transition: all 0.2s ease-in-out;
@@ -332,14 +336,130 @@ body {
   margin-bottom: 0 !important;
 }
 
-.InvestimentosTitle {
+#CasasLocacao .CasasLocacaoImageContainer {
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  right: 0;
+  left: 0;
+  height: 90vh;
+}
+
+#CasasLocacaoImagesModal {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: #fff;
+  padding: 50px;
+  z-index: 100;
+  display: none;
+  overflow: auto;
+}
+
+#CasasLocacaoImagesModal .CLIMIconClose {
+  position: fixed;
+  margin-left: -100px;
+  background-color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.CLIMTitle {
+  font-size: 40px;
+  margin: 50px 0 20px;
+}
+
+.CLIMSubtitle {
+  font-family: "Dancing Script", cursive;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+.CLIMImage {
+  height: 700px;
+}
+
+.CLIMTitlePerson {
+  margin: 50px 0 20px;
+  font-size: 40px;
+  position: relative;
+}
+
+.CLIMTitlePerson .line {
+  width: 49%;
+  height: 10px;
+  background-color: #ffff00;
+  position: absolute;
+  top: 0;
+}
+
+.CLIMTitlePerson .line:nth-child(1) {
+  left: 0;
+}
+.CLIMTitlePerson .line:nth-child(2) {
+  right: 0;
+}
+
+.CLIMCard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.CLIMCard_text {
+  width: 50%;
+}
+
+.CLIMCard_image {
+  width: 50%;
+}
+
+.CLIMCard_image img {
+  width: 100%;
+}
+
+.CLIMGridImages {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.CLIMGridImages img {
+  width: 100%;
+}
+
+.CLIMButtonChoice {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.CLIMButtonChoice button {
+  border: 0;
+  color: #fff;
+  padding: 5px 20px;
+  border-radius: 10px;
+  margin-top: 40px;
+}
+
+.CLIMButtonChoicePink {
+  background-color: #8c4887;
+}
+
+.CLIMButtonChoicePurple {
+  background-color: #3d132f;
+  font-weight: bold;
+}
+
+#Investimentos .InvestimentosTitle {
   text-align: center;
   font-weight: bold;
   font-size: 40px;
   margin-bottom: 50px;
 }
 
-.InvestimentosGeneralInfos {
+#Investimentos .InvestimentosGeneralInfos {
   background-color: #f7f7f7;
   padding: 30px;
 
@@ -350,30 +470,30 @@ body {
   font-size: 24px;
 }
 
-.InvestimentosGeneralInfoLogo {
+#Investimentos .InvestimentosGeneralInfoLogo {
   width: 300px;
 }
 
-.GeneralInfos_items {
+#Investimentos .GeneralInfos_items {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 30px;
 }
 
-.GeneralInfos_item {
+#Investimentos .GeneralInfos_item {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
 }
 
-.GeneralInfos_items-title {
+#Investimentos .GeneralInfos_items-title {
   font-weight: bold;
   margin-bottom: 0 !important;
 }
 
-.GeneralInfos_items-value {
+#Investimentos .GeneralInfos_items-value {
   background-color: #fff;
   border: 1px solid #8c4887;
   vertical-align: middle;
@@ -384,7 +504,7 @@ body {
   color: #999999;
 }
 
-.InvestimentTitle {
+#Investimentos .InvestimentTitle {
   width: 100%;
   text-align: center;
   border-bottom: 2px solid #8c4887;
@@ -394,7 +514,7 @@ body {
   font-size: 40px;
 }
 
-.DadosClienteEventoInfosRow {
+#Investimentos .DadosClienteEventoInfosRow {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -403,25 +523,26 @@ body {
   margin-bottom: 20px;
   font-size: 24px;
 }
-.DadosClienteEventoInfosRow:last-child {
-  margin-bottom:50px;
+
+#Investimentos .DadosClienteEventoInfosRow:last-child {
+  margin-bottom: 50px;
 }
 
-.DadosClienteEventoInfos_label {
+#Investimentos .DadosClienteEventoInfos_label {
   font-weight: bold;
   color: #000;
   width: 50%;
   text-align: end;
 }
 
-.DadosClienteEventoInfosField {
+#Investimentos .DadosClienteEventoInfosField {
   display: flex;
   align-items: center;
   gap: 20px;
   width: 100%;
 }
 
-.DadosClienteEventoInfos_falseInput {
+#Investimentos .DadosClienteEventoInfos_falseInput {
   width: 100%;
   height: 60px;
   text-align: center;
@@ -430,7 +551,7 @@ body {
 
   position: relative;
 }
-.DadosClienteEventoInfos_falseInput p {
+#Investimentos .DadosClienteEventoInfos_falseInput p {
   margin-bottom: 0 !important;
   position: absolute;
   top: 50%;
@@ -439,111 +560,111 @@ body {
   font-weight: bold;
 }
 
-.anfitrioes {
+#Investimentos .anfitrioes {
   display: flex;
   align-items: center;
   justify-content: stretch;
 }
-.anfitrioes .DadosClienteEventoInfos_label {
+#Investimentos .anfitrioes .DadosClienteEventoInfos_label {
   width: 10%;
 }
 
-.dataEvento,
-.numConvidados,
-.codProposta {
+#Investimentos .dataEvento,
+#Investimentos .numConvidados,
+#Investimentos .codProposta {
   width: 30%;
 }
 
-.horaEvento {
+#Investimentos .horaEvento {
   width: 40%;
 }
 
-.espacoEscolhido {
+#Investimentos .espacoEscolhido {
   width: 60%;
 }
 
-.TablePrices table {
+#Investimentos .TablePrices table {
   width: 100%;
 }
 
-.TablePricesTitles {
+#Investimentos .TablePricesTitles {
   background-color: #3d132f;
   color: #fff;
   font-weight: bold;
 }
 
-.TablePrices tbody tr td {
+#Investimentos .TablePrices tbody tr td {
   height: 80px;
 }
-.TablePrices tbody tr:last-child td {
+#Investimentos .TablePrices tbody tr:last-child td {
   padding-bottom: 50px;
 }
 
-.TablePricesTitles tr td {
+#Investimentos .TablePricesTitles tr td {
   padding: 10px 50px;
   font-size: 24px;
   text-align: center;
 }
 
-.TablePrices tr {
-  font-size:24px;
+#Investimentos .TablePrices tr {
+  font-size: 24px;
 }
 
-.TablePrices tr td:nth-child(2) {
+#Investimentos .TablePrices tr td:nth-child(2) {
   text-align: center;
 }
 
-.column-1 {
+#Investimentos .column-1 {
   width: 70%;
 }
 
-.column-2 {
+#Investimentos .column-2 {
   width: 30%;
 }
 
-.TablePricesBlack {
+#Investimentos .TablePricesBlack {
   color: #000;
   font-weight: bold;
   padding-left: 40px;
   font-size: 24px;
 }
 
-.TablePricesPurple {
+#Investimentos .TablePricesPurple {
   color: #8c4887;
   font-weight: bold;
   font-size: 24px;
   padding-left: 40px;
 }
-.TablePricesPurple ~ td {
+#Investimentos .TablePricesPurple ~ td {
   color: gray;
 }
 
-.TablePricesFooter {
+#Investimentos .TablePricesFooter {
   width: 100%;
 }
 
-.TablePricesFooter .row-1 {
+#Investimentos .TablePricesFooter .row-1 {
   background-color: #3d132f;
   color: #fff;
 }
-.TablePricesFooter .row-2 {
+#Investimentos .TablePricesFooter .row-2 {
   background-color: #8c4887;
   color: #fff;
 }
 
-.TablePricesFooter tr td {
+#Investimentos .TablePricesFooter tr td {
   padding: 10px 50px;
   font-size: 24px;
 }
 
-.FormaPagamentoSubtitle {
+#Investimentos .FormaPagamentoSubtitle {
   font-family: "Dancing Script", cursive;
   text-align: center;
   font-size: 40px;
   margin-top: 50px;
 }
 
-.FormaPagamentoForm {
+#Investimentos .FormaPagamentoForm {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -551,17 +672,17 @@ body {
   margin: 50px auto;
   font-size: 24px;
 }
-.FormaPagamentoFormLeft {
+#Investimentos .FormaPagamentoFormLeft {
   width: 60%;
   text-align: end;
 }
 
-.FormaPagamentoFormLeft div {
+#Investimentos .FormaPagamentoFormLeft div {
   position: relative;
   margin-bottom: -1px;
 }
 
-.FormaPagamentoFormLeft h4 {
+#Investimentos .FormaPagamentoFormLeft h4 {
   margin-bottom: 0 !important;
   position: absolute;
   top: 50%;
@@ -570,12 +691,12 @@ body {
   font-size: 24px;
 }
 
-.FormaPagamentoFormRight {
+#Investimentos .FormaPagamentoFormRight {
   width: 40%;
 }
 
-.FormaPagamentoFormLeftEntrada,
-.FormaPagamentoFormLeftNumParcelas {
+#Investimentos .FormaPagamentoFormLeftEntrada,
+#Investimentos .FormaPagamentoFormLeftNumParcelas {
   background-color: #3d132f;
   color: #fff;
   height: 80px;
@@ -583,19 +704,19 @@ body {
   border: 0;
 }
 
-.FormaPagamentoFormLeftNumValorParcelas,
-.FormaPagamentoFormLeftNumValorEvento {
+#Investimentos .FormaPagamentoFormLeftNumValorParcelas,
+#Investimentos .FormaPagamentoFormLeftNumValorEvento {
   background-color: #8c4887;
   color: #fff;
   height: 80px;
   border: 0;
 }
 
-.FormaPagamentoFormRight {
+#Investimentos .FormaPagamentoFormRight {
   background-color: #b3b3b3;
 }
 
-.FormaPagamentoFormRight div input {
+#Investimentos .FormaPagamentoFormRight div input {
   border: 0;
   background-color: #b3b3b3;
   height: 100%;
@@ -604,22 +725,22 @@ body {
   padding: 0 10px;
 }
 
-.FormaPagamentoFormRight div input::placeholder {
+#Investimentos .FormaPagamentoFormRight div input::placeholder {
   color: #000;
   text-align: center;
 }
 
-.FormaPagamentoFormRight div input:focus {
+#Investimentos .FormaPagamentoFormRight div input:focus {
   outline: 0;
 }
 
-.FormaPagamentoFormRightNumValorParcelas,
-.FormaPagamentoFormRightNumValorEvento {
+#Investimentos .FormaPagamentoFormRightNumValorParcelas,
+#Investimentos .FormaPagamentoFormRightNumValorEvento {
   background-color: #b3b3b3;
   vertical-align: middle;
 }
 
-.FormaPagamentoFormRight h4 {
+#Investimentos .FormaPagamentoFormRight h4 {
   margin-bottom: 0 !important;
   line-height: 80px;
   text-align: center;
