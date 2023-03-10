@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: "Antapani";
+  font-family: "Antapani" sans-serif;
 }
 
 #Home {
@@ -346,6 +346,8 @@ body {
   display: flex;
   align-content: center;
   justify-content: space-between;
+
+  font-size: 24px;
 }
 
 .InvestimentosGeneralInfoLogo {
@@ -356,7 +358,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 30px;
 }
 
 .GeneralInfos_item {
@@ -382,14 +384,14 @@ body {
   color: #999999;
 }
 
-.DadosClienteEventoTitle {
+.InvestimentTitle {
   width: 100%;
   text-align: center;
-  border-bottom: 1px solid #8c4887;
+  border-bottom: 2px solid #8c4887;
   color: #8c4887;
-  font-weight: bold;
   padding-bottom: 40px;
   margin-top: 80px;
+  font-size: 40px;
 }
 
 .DadosClienteEventoInfosRow {
@@ -399,6 +401,10 @@ body {
   width: 100%;
   padding: 0 30px;
   margin-bottom: 20px;
+  font-size: 24px;
+}
+.DadosClienteEventoInfosRow:last-child {
+  margin-bottom:50px;
 }
 
 .DadosClienteEventoInfos_label {
@@ -466,22 +472,25 @@ body {
   font-weight: bold;
 }
 
+.TablePrices tbody tr td {
+  height: 80px;
+}
+.TablePrices tbody tr:last-child td {
+  padding-bottom: 50px;
+}
+
 .TablePricesTitles tr td {
   padding: 10px 50px;
-  font-size: 30px;
+  font-size: 24px;
   text-align: center;
 }
 
-.TablePrices tbody tr {
-  font-size: 30px;
+.TablePrices tr {
+  font-size:24px;
 }
 
-.TablePrices tbody tr {
-  font-size: 30px;
-}
-.TablePrices tbody tr td:nth-child(2) {
+.TablePrices tr td:nth-child(2) {
   text-align: center;
-  font-weight: bold;
 }
 
 .column-1 {
@@ -496,35 +505,125 @@ body {
   color: #000;
   font-weight: bold;
   padding-left: 40px;
-  font-size: 30px;
+  font-size: 24px;
 }
 
 .TablePricesPurple {
   color: #8c4887;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 24px;
   padding-left: 40px;
 }
 .TablePricesPurple ~ td {
   color: gray;
 }
 
-.TablePricesFooter{
+.TablePricesFooter {
   width: 100%;
 }
 
 .TablePricesFooter .row-1 {
   background-color: #3d132f;
   color: #fff;
-  padding: 10px 50px;
-
 }
-.TablePricesFootert .row-2 {
+.TablePricesFooter .row-2 {
   background-color: #8c4887;
   color: #fff;
+}
+
+.TablePricesFooter tr td {
   padding: 10px 50px;
+  font-size: 24px;
+}
 
+.FormaPagamentoSubtitle {
+  font-family: "Dancing Script", cursive;
+  text-align: center;
+  font-size: 40px;
+  margin-top: 50px;
+}
 
+.FormaPagamentoForm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 700px;
+  margin: 50px auto;
+  font-size: 24px;
+}
+.FormaPagamentoFormLeft {
+  width: 60%;
+  text-align: end;
+}
+
+.FormaPagamentoFormLeft div {
+  position: relative;
+  margin-bottom: -1px;
+}
+
+.FormaPagamentoFormLeft h4 {
+  margin-bottom: 0 !important;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 24px;
+}
+
+.FormaPagamentoFormRight {
+  width: 40%;
+}
+
+.FormaPagamentoFormLeftEntrada,
+.FormaPagamentoFormLeftNumParcelas {
+  background-color: #3d132f;
+  color: #fff;
+  height: 80px;
+
+  border: 0;
+}
+
+.FormaPagamentoFormLeftNumValorParcelas,
+.FormaPagamentoFormLeftNumValorEvento {
+  background-color: #8c4887;
+  color: #fff;
+  height: 80px;
+  border: 0;
+}
+
+.FormaPagamentoFormRight {
+  background-color: #b3b3b3;
+}
+
+.FormaPagamentoFormRight div input {
+  border: 0;
+  background-color: #b3b3b3;
+  height: 100%;
+  width: 100%;
+  height: 80px;
+  padding: 0 10px;
+}
+
+.FormaPagamentoFormRight div input::placeholder {
+  color: #000;
+  text-align: center;
+}
+
+.FormaPagamentoFormRight div input:focus {
+  outline: 0;
+}
+
+.FormaPagamentoFormRightNumValorParcelas,
+.FormaPagamentoFormRightNumValorEvento {
+  background-color: #b3b3b3;
+  vertical-align: middle;
+}
+
+.FormaPagamentoFormRight h4 {
+  margin-bottom: 0 !important;
+  line-height: 80px;
+  text-align: center;
+  font-size: 24px;
 }
 
 @media screen and (min-width: 768px) {
