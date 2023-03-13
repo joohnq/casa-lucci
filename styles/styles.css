@@ -21,11 +21,11 @@ body {
   background-color: #3d132f;
   text-align: center;
 }
-
+/* 
 #Aside > img {
   width: 80px;
   height: 80px;
-}
+} */
 
 #Aside ul {
   list-style: none;
@@ -40,7 +40,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 10px 0;
   padding: 10px;
   cursor: pointer;
 }
@@ -297,9 +297,12 @@ body {
 }
 
 #CasasLocacao .CasasLocacaoImages {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   justify-content: center;
+  align-items: center;
+  justify-items: center;
+
   gap: 15px;
 }
 
@@ -308,9 +311,6 @@ body {
   margin-bottom: 15px;
   max-width: 500px;
   height: 333.13px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 #CasasLocacao .CasasLocacaoImagesBox img {
@@ -334,15 +334,6 @@ body {
   left: 0;
   padding: 10px 0;
   margin-bottom: 0 !important;
-}
-
-#CasasLocacao .CasasLocacaoImageContainer {
-  top: 0;
-  bottom: 0;
-  position: absolute;
-  right: 0;
-  left: 0;
-  height: 90vh;
 }
 
 #CasasLocacaoImagesModal {
@@ -438,9 +429,10 @@ body {
 .CLIMButtonChoice button {
   border: 0;
   color: #fff;
-  padding: 5px 20px;
+  padding: 8px 30px;
   border-radius: 10px;
   margin-top: 40px;
+  font-size: 20px;
 }
 
 .CLIMButtonChoicePink {
@@ -450,6 +442,41 @@ body {
 .CLIMButtonChoicePurple {
   background-color: #3d132f;
   font-weight: bold;
+}
+
+.CLIMBoxExtraImages {
+  background-color: #3d132f;
+}
+
+.CLIMBoxExtraImages {
+  color: #fff;
+  padding: 30px 50px 100px;
+  margin-top: 100px;
+}
+
+.CLIMBoxExtraImages_images {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.CLIMBoxExtraImages_image img {
+  width: 100%;
+}
+
+.CLIMBoxExtraImages_image {
+  position: relative;
+}
+
+.CLIMBoxExtraImages_desc {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px 0;
+  margin-bottom: 0 !important;
 }
 
 #Investimentos .InvestimentosTitle {
@@ -464,14 +491,14 @@ body {
   padding: 30px;
 
   display: flex;
-  align-content: center;
+  align-items: center;
   justify-content: space-between;
 
   font-size: 24px;
 }
 
 #Investimentos .InvestimentosGeneralInfoLogo {
-  width: 300px;
+  height: 130px;
 }
 
 #Investimentos .GeneralInfos_items {
@@ -747,8 +774,230 @@ body {
   font-size: 24px;
 }
 
+#PRD .PRDGeneralInfos {
+  background-color: #f7f7f7;
+  padding: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-size: 24px;
+}
+
+#PRD .PRDGeneralInfoLogo {
+  height: 130px;
+}
+
+#PRD .GeneralInfos_item {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#PRD .GeneralInfos_item p {
+  margin-bottom: 0 !important;
+  font-size: 20px;
+}
+#PRD .GeneralInfos_item p:nth-child(1) {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+#PRD .PRDTitle {
+  width: 100%;
+  text-align: center;
+  border-bottom: 2px solid #8c4887;
+  color: #8c4887;
+  padding-bottom: 40px;
+  margin-top: 80px;
+  font-size: 40px;
+}
+#PRD .PRDClienteInfosRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 150px;
+}
+
+#PRD .PRDClienteInfos_item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+#PRD .PRDClienteInfos_item-Label {
+  font-weight: bold;
+}
+
+#PRD .PRDClienteInfos_item-text {
+  margin-bottom: 0 !important;
+}
+
+#PRD .TablePrices table {
+  width: 100%;
+}
+
+#PRD .TablePricesTitles {
+  background-color: #3d132f;
+  color: #fff;
+  font-weight: bold;
+}
+
+#PRD .TablePrices tbody tr td {
+  height: 80px;
+}
+#PRD .TablePrices tbody tr:last-child td {
+  padding-bottom: 200px;
+}
+#PRD .TablePricesTitles tr td {
+  padding: 10px 50px;
+  font-size: 24px;
+  text-align: center;
+}
+
+#PRD .TablePrices tr {
+  font-size: 24px;
+}
+
+#PRD .TablePrices tr td:nth-child(2) {
+  text-align: center;
+}
+
+#PRD .column-1 {
+  width: 70%;
+}
+
+#PRD .column-2 {
+  width: 30%;
+}
+
+#PRD .TablePricesBlack {
+  color: #000;
+  font-weight: bold;
+  padding-left: 40px;
+  font-size: 24px;
+}
+
+#PRD .TablePricesPurple {
+  color: #8c4887;
+  font-weight: bold;
+  font-size: 24px;
+  padding-left: 40px;
+}
+#PRD .TablePricesPurple ~ td {
+  color: gray;
+}
+
+#PRD .TablePricesFooter {
+  width: 100%;
+}
+
+#PRD .TablePricesFooter .row-1 {
+  background-color: #3d132f;
+  color: #fff;
+}
+#PRD .TablePricesFooter .row-2 {
+  background-color: #8c4887;
+  color: #fff;
+}
+
+#PRD .TablePricesFooter tr td {
+  padding: 10px 50px;
+  font-size: 24px;
+}
+
+#PRD .row-3 {
+  background-color: #b3b3b3;
+  color: #fff;
+}
+
+#PRD .PRDEventoInfoRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+}
+
+#PRD .PRDEventoInfo {
+  position: absolute;
+  background-color: #fff;
+  right: 0;
+  left: 0;
+  padding: 0 50px;
+  bottom: 200px;
+}
+
+#PRD .PRDEventoInfoRowItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+#PRD .PRDEventoInfoRowItem_label {
+  font-weight: bold;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+#PRD .PRDEventoInfoRowItem_text {
+  margin-bottom: 0 !important;
+  padding: 5px 10px;
+  border: 1px solid #8c4887;
+  border-radius: 10px;
+  width: 100%;
+  color: #bebebe;
+}
+
+#PRD .PRDDataEvento,
+#PRD .PRDNumConvidados {
+  width: 20%;
+}
+#PRD .PRDCasaEvento {
+  width: 40%;
+}
+#PRD .PRDPresente {
+  width: 48%;
+}
+#PRD select {
+  color: #bebebe;
+}
+
 @media screen and (min-width: 768px) {
   .HeaderDropdown button {
     font-size: 24px;
+  }
+}
+
+@media screen and (min-height: 0px) {
+  #Aside > img {
+    width: 60px;
+    height: 60px;
+  }
+  #Aside .AsideNav_item-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media screen and (min-height: 600px) {
+  #Aside .AsideNav_item-icon {
+    width: 25px;
+    height: 25px;
+  }
+}
+@media screen and (min-height: 900px) {
+  #Aside > img {
+    width: 80px;
+    height: 80px;
+  }
+  #Aside .AsideNav_item-icon {
+    width: 30px;
+    height: 30px;
   }
 }
