@@ -16,7 +16,10 @@ body {
   text-align: center;
   position: fixed;
   z-index: 1000;
-  overflow: auto;
+}
+
+.overflow {
+  overflow-y: auto;
 }
 
 #Aside > img {
@@ -44,15 +47,14 @@ body {
   height: 30px;
 }
 
-/* #Aside .AsideNav_item:hover > .AsideNav_item-text {
-  display: block;
-} */
-
-/* #Aside .AsideNav_item:hover {
+#Aside .AsideNav_item:hover {
   background-color: #8d4886;
-  width: 100px;
+  width: 300px;
   transition: 0.1s ease-in-out;
-}  */
+}
+#Aside .AsideNav_item:hover > .AsideNav_item-text {
+  display: block;
+}
 
 #Aside .AsideNav_item-icon {
   width: 30px;
@@ -79,7 +81,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 10vh;
   padding-right: 20px;
   position: fixed;
   top: 0;

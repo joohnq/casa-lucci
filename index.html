@@ -17,16 +17,11 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./styles/styles.css" />
-    <link
-      rel="stylesheet"
-      href="https://kit.fontawesome.com/af70aa32cf.css"
-      crossorigin="anonymous"
-    />
   </head>
 
   <body>
     <section class="Home" id="Home">
-      <aside class="Aside" id="Aside">
+      <aside class="Aside overflow" id="Aside">
         <img
           src="./assets/logotipo-casa-lucci-sem-bg-alta-quadrado.png"
           alt="LOGO WELUCCI"
@@ -2078,9 +2073,30 @@
                         realização de evento específico e de caráter
                         personalíssimo. Não há garantia de data do evento.
                       </li>
-                      <li>O Contratante tem ciência de que o evento tem características especiais tais como: fechamento de data-calendário específica; contratação de equipe operacional personalizada; decoração e mobiliário exclusivo, cardápio exclusivo, decoração exclusiva entre outros.</li>
-                      <li>Quaisquer taxas referentes à celebração religiosa ou civil e aos itens envolvidos para sua realização, bem como qualquer tipo de celebração no local do evento, caso houver, são de responsabilidade total da Contratante, que deverá atender as exigências do contrato firmado com essas instituições/pessoas.</li>
-                      <li>CONTRATADA: VFJB EVENTOS EIRELI, pessoa jurídica de direito privado, inscrita no CNPJ/RFB sob nº 18.465.770-0001/75 com sede na Rua Doutor Clóvis de Oliveira, nº 224, Bairro: Vila Progredior, Cidade de São Paulo, SP, CEP 05616-130, neste ato representado na forma de seu contrato social.</li>
+                      <li>
+                        O Contratante tem ciência de que o evento tem
+                        características especiais tais como: fechamento de
+                        data-calendário específica; contratação de equipe
+                        operacional personalizada; decoração e mobiliário
+                        exclusivo, cardápio exclusivo, decoração exclusiva entre
+                        outros.
+                      </li>
+                      <li>
+                        Quaisquer taxas referentes à celebração religiosa ou
+                        civil e aos itens envolvidos para sua realização, bem
+                        como qualquer tipo de celebração no local do evento,
+                        caso houver, são de responsabilidade total da
+                        Contratante, que deverá atender as exigências do
+                        contrato firmado com essas instituições/pessoas.
+                      </li>
+                      <li>
+                        CONTRATADA: VFJB EVENTOS EIRELI, pessoa jurídica de
+                        direito privado, inscrita no CNPJ/RFB sob nº
+                        18.465.770-0001/75 com sede na Rua Doutor Clóvis de
+                        Oliveira, nº 224, Bairro: Vila Progredior, Cidade de São
+                        Paulo, SP, CEP 05616-130, neste ato representado na
+                        forma de seu contrato social.
+                      </li>
                     </ol>
                   </div>
                 </section>
@@ -2138,6 +2154,31 @@
       CLIMButtonChoicePink.forEach((item) => {
         item.addEventListener("click", (e) => {
           e.target.parentNode.parentNode.style.display = "none";
+        });
+      });
+
+      AsideNavItem.forEach((item) => {
+        item.addEventListener("mouseover", (e) => {
+          if (e.target.parentNode.parentNode.classList.contains("AsideNav")) {
+            e.target.parentNode.parentNode.parentNode.classList.remove(
+              "overflow"
+            );
+          } else if (
+            e.target.parentNode.parentNode.classList.contains("Aside")
+          ) {
+            e.target.parentNode.parentNode.classList.remove("overflow");
+          }
+        });
+        item.addEventListener("mouseout", (e) => {
+          if (e.target.parentNode.parentNode.classList.contains("AsideNav")) {
+            e.target.parentNode.parentNode.parentNode.classList.add(
+              "overflow"
+            );
+          } else if (
+            e.target.parentNode.parentNode.classList.contains("Aside")
+          ) {
+            e.target.parentNode.parentNode.classList.add("overflow");
+          }
         });
       });
     </script>
